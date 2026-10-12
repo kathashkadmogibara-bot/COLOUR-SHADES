@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mogibara Colour Shades</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <a class="nav-btn" href="../picker/index.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+    Colour Picker
+  </a>
+  <a class="nav-btn" href="../library/index.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+    Colour Library
+  </a>
+</div>
+
+<header class="site-header">
+  <div class="brand">MOGIBARA</div>
+  <div class="site-title">Colour Shades</div>
+</header>
+
+<main class="shades-wrap">
+
+  <div class="gen-card">
+    <div class="gen-title">Generate your own palette</div>
+    <div class="gen-sub">Drop in a colour and get a matching 5-colour palette, built from it.</div>
+    <div class="gen-input-row">
+      <input type="color" id="genColour" class="gen-swatch-input" value="#0b9fde">
+      <input id="genHex" class="gen-hex-input" spellcheck="false" autocomplete="off" value="0B9FDE">
+      <button class="gen-btn" id="genBtn">Generate</button>
+    </div>
+    <div class="gen-result" id="genResult"></div>
+  </div>
+
+  <div class="section-title">Curated palettes — tap any colour</div>
+  <div class="palette-grid" id="paletteGrid"></div>
+
+</main>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal-card modal-wrap">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-swatch" id="modalSwatch"></div>
+    <div class="modal-title" id="modalTitle">—</div>
+
+    <div class="field-row"><label>HEX</label><input id="mHex" readonly>
+      <button class="icon-btn" data-mcopy="hex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+    </div>
+    <div class="field-row" style="margin-top:10px"><label>RGB</label><input id="mRgb" readonly>
+      <button class="icon-btn" data-mcopy="rgb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+    </div>
+    <div class="field-row" style="margin-top:10px"><label>CMYK</label><input id="mCmyk" readonly>
+      <button class="icon-btn" data-mcopy="cmyk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+    </div>
+    <div class="field-row" style="margin-top:10px"><label>HSV</label><input id="mHsv" readonly>
+      <button class="icon-btn" data-mcopy="hsv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+    </div>
+    <div class="field-row" style="margin-top:10px"><label>HSL</label><input id="mHsl" readonly>
+      <button class="icon-btn" data-mcopy="hsl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+    </div>
+
+    <a class="cta-card" id="mOpenPicker" style="margin-top:16px" href="#">
+      <div class="cta-ico">🎨</div>
+      <div class="cta-text"><b>Open in Picker</b><span>Fine-tune this colour with the SV box &amp; sliders</span></div>
+    </a>
+  </div>
+</div>
+
+<footer class="site-footer">© 2026 <b>MOGIBARA</b> — Colour Room</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
